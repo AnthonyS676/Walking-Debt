@@ -13,7 +13,7 @@ public class Move : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        jumpHeight = 0;
+        jumpHeight = 10;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
