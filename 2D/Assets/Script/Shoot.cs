@@ -5,9 +5,13 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
     public Rigidbody2D projectile;
-
+    public Rigidbody2D projectile1;
+    public Rigidbody2D projectile2;
+    public Rigidbody2D projectile3;
     public float speed = 20;
     Crystal Thecrystal;
+    bool ShootPink = false;
+    bool ShootPurple = true;
 
 
     // Use this for initialization
@@ -21,18 +25,24 @@ public class Shoot : MonoBehaviour
     {
         if (Thecrystal.count > 0)
         {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                ShootPink = false;
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                ShootPink = !ShootPink;
+            }
             if (Input.GetButtonDown("Fire1"))
             {
-                
                 Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Vector3 shootdir = mousePos - transform.position;
                 shootdir = shootdir.normalized;
-
-                Rigidbody2D instantiatedProjectile = Instantiate(projectile, transform.position + shootdir , transform.rotation) as Rigidbody2D;
+                Rigidbody2D bullet = ShootPink ? projectile1 : projectile;
+                Rigidbody2D instantiatedProjectile = Instantiate(bullet, transform.position + shootdir , transform.rotation) as Rigidbody2D;
                 instantiatedProjectile.velocity = shootdir * speed;
-                Thecrystal.count -= 1;
+                Thecrystal.count -= ShootPink ? 5: 1;
                 Thecrystal.countText.text = "Total Coins: " + Thecrystal.count;
-
             }
         }
     }
