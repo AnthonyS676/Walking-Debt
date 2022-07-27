@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
+    public LayerMask floors;
+    public LayerMask player;
     public Rigidbody2D rb;
     public float moveSpeed = 10.0f;
     public float jumpHeight = 0;
@@ -13,7 +15,7 @@ public class Move : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        jumpHeight = 0;
+        jumpHeight = 10;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -35,6 +37,21 @@ public class Move : MonoBehaviour
         {
             rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
         }
+
+        if (rb.velocity.y > 0)
+        {
+            Physics2D.IgnoreLayerCollision(3, 6, true);
+        }
+        else
+        {
+            Physics2D.IgnoreLayerCollision(3, 6, false);
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            Physics2D.IgnoreLayerCollision(3, 6, true);
+        }
     }
+    
 }
 

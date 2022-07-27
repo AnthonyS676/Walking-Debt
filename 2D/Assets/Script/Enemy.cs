@@ -1,27 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 0.5f;
-    public Transform Player;
+    public GameObject target;
+    public float Speed;
 
-    // Use this for initialization
-    void Start()
+    private float distance;
+    public float Max;
+    private void Start()
     {
-
+        target = GameObject.FindGameObjectWithTag("Player");
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    private void Update()
     {
-        Vector3 displacement = Player.position - transform.position;
-        displacement = displacement.normalized;
-        if (Vector2.Distance(Player.position, transform.position) > 1.0f)
+        distance = Vector2.Distance(target.transform.position, transform.position);
+        if (distance <= Max)
         {
-            transform.position += (displacement * speed * Time.deltaTime);
-
+            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, Speed * Time.deltaTime);
         }
     }
 }
