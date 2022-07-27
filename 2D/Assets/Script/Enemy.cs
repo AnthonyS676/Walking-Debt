@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Enemy : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player");
     }
+    
     private void Update()
     {
         distance = Vector2.Distance(target.transform.position, transform.position);
