@@ -49,8 +49,9 @@ public class Goodbye : MonoBehaviour
         if (health <= 0)
         {
             gameObject.SetActive(false);
-            dEATH = dEATH + 1;
+            dEATH += 1;
             countText.text = "Debts paid: " + dEATH;
+            Debug.Log("hello");
             if (dEATH == 9)
             {
                 ATM.gameObject.SetActive(true);
