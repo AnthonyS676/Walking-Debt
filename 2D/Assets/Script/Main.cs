@@ -18,6 +18,6 @@ public class Main : MonoBehaviour
     }
     public void game()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Level1");
     }
 }
