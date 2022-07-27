@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 {
     public GameObject target;
     public float Speed;
-
+    public GameObject wall;
     private float distance;
     public float Max;
     private void Start()
@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
         if (distance <= Max)
         {
             transform.position = Vector2.MoveTowards(transform.position, target.transform.position, Speed * Time.deltaTime);
+            wall.gameObject.SetActive(false);
         }
     }
 }

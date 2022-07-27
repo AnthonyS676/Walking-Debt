@@ -6,23 +6,24 @@ public class Shoot : MonoBehaviour
 {
     public Rigidbody2D projectile;
     public Rigidbody2D projectile1;
-    public Rigidbody2D projectile2;
-    public Rigidbody2D projectile3;
+
     public float speed = 20;
     Crystal Thecrystal;
     bool ShootPink = false;
-    bool ShootPurple = true;
-
+    public Animator anim;
+ 
 
     // Use this for initialization
     void Start()
     {
+
         Thecrystal = GetComponent<Crystal>();
     }
     
     // Update is called once per frame
     void Update()
     {
+        bool fire = false;
         if (Thecrystal.count > 0)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -35,6 +36,7 @@ public class Shoot : MonoBehaviour
             }
             if (Input.GetButtonDown("Fire1"))
             {
+                fire = true;
                 Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Vector3 shootdir = mousePos - transform.position;
                 shootdir = shootdir.normalized;
@@ -45,5 +47,6 @@ public class Shoot : MonoBehaviour
                 Thecrystal.countText.text = "Total Coins: " + Thecrystal.count;
             }
         }
+        anim.SetBool("isThrowing", fire);
     }
 }
