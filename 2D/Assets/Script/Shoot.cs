@@ -11,8 +11,7 @@ public class Shoot : MonoBehaviour
     public float speed = 20;
     Crystal Thecrystal;
     bool ShootPink = false;
-    bool ShootPurple = true;
-
+ 
 
     // Use this for initialization
     void Start()

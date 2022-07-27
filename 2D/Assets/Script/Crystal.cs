@@ -18,6 +18,13 @@ public class Crystal : MonoBehaviour
     private void Update()
     {
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            SceneManager.LoadScene(3);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D other)
        {
         Debug.Log("Works2");
