@@ -135,9 +135,10 @@ GameObject:
   - component: {fileID: 106862584}
   - component: {fileID: 106862583}
   - component: {fileID: 106862585}
+  - component: {fileID: 106862586}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -612,6 +613,18 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!114 &106862586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106862581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2a6436677a9a9f4dae1e298a85359c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &602664647
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,7 +1083,7 @@ GameObject:
   - component: {fileID: 1220021046}
   m_Layer: 0
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -15,10 +15,7 @@ public class Shoot : MonoBehaviour
     {
         Thecrystal = GetComponent<Crystal>();
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        
-    }
+    
     // Update is called once per frame
     void Update()
     {
