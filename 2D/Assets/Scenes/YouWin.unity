@@ -940,11 +940,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1760617619}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b19e2ad0cc5e41141bbcc6d26306d9a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 20329eea75cdeb4499c9e34a95362e17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   countText: {fileID: 971295191}
-  score: 0
 --- !u!4 &1760617621
 Transform:
   m_ObjectHideFlags: 0

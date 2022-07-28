@@ -40,9 +40,11 @@ public class Goodbye : MonoBehaviour
         }
         if (health <= 0)
         {
+            deathCounter.IncreaseDeathCount();
             gameObject.SetActive(false);
             
-            deathCounter.IncreaseDeathCount();
+
+
         }
     }
 }

@@ -21,8 +21,9 @@ public class Crystal : MonoBehaviour
         PlayerPrefs.SetInt("count", count);
 
     }
-    private void Update()
+    private void FixedUpdate()
     {
+        score = count;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
