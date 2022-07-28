@@ -8,17 +8,18 @@ public class Crystal : MonoBehaviour
     public TextMeshProUGUI countText;
     public int count;
     public AudioSource audioSource;
-
-
+    public TextMeshProUGUI text;
+    public static int score;
     private void Awake()
     {
-
+        score = count;
     }
     private void Start()
     {
-   
+        text.text = "" + score;
         countText.text = "Total Coins: " + count;
         PlayerPrefs.SetInt("count", count);
+
     }
     private void Update()
     {
@@ -66,7 +67,9 @@ public class Crystal : MonoBehaviour
             countText.text = "Total Coins: " + count;
             //Debug.Log("Works");
         }
-    }
 
-    
+       
+        score = count;
+
+    }    
 }
