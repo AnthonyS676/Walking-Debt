@@ -11,6 +11,8 @@ public class Move : MonoBehaviour
     public SpriteRenderer rend;
     public float moveSpeed = 10.0f;
     public float jumpHeight = 0;
+    public SpriteRenderer arm;
+    public AudioSource audioSource;
     void Start()
     {
 
@@ -30,11 +32,14 @@ public class Move : MonoBehaviour
         bool air = false;
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            audioSource.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
         }
         if (Input.GetKey(KeyCode.A))
         {
             rend.flipX = true;
+            arm.flipX = true;
+            arm.transform.localPosition = new Vector3(-0.051f, 0.005f, -1);
             moving = true;
             rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
         }
@@ -42,6 +47,8 @@ public class Move : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             rend.flipX = false;
+            arm.flipX = false;
+            arm.transform.localPosition = new Vector3(0.051f, 0.005f,-1);
             moving = true;
             rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
         }

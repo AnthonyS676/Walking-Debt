@@ -10,8 +10,9 @@ public class Shoot : MonoBehaviour
     public float speed = 20;
     Crystal Thecrystal;
     bool ShootPink = false;
-    public Animator anim;
- 
+    public GameObject arm;
+    public AudioSource audioSource;
+
 
     // Use this for initialization
     void Start()
@@ -23,7 +24,7 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool fire = false;
+        
         if (Thecrystal.count > 0)
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -36,7 +37,8 @@ public class Shoot : MonoBehaviour
             }
             if (Input.GetButtonDown("Fire1"))
             {
-                fire = true;
+                audioSource.Play();
+                arm.SetActive(true);
                 Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Vector3 shootdir = mousePos - transform.position;
                 shootdir = shootdir.normalized;
@@ -47,6 +49,6 @@ public class Shoot : MonoBehaviour
                 Thecrystal.countText.text = "Total Coins: " + Thecrystal.count;
             }
         }
-        anim.SetBool("isThrowing", fire);
+        
     }
 }
