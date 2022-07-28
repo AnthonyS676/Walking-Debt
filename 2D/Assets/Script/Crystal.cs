@@ -8,25 +8,28 @@ public class Crystal : MonoBehaviour
     public TextMeshProUGUI countText;
     public int count;
     public AudioSource audioSource;
-
+    public TextMeshProUGUI text;
+    public static int score;
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        score = count;
     }
     private void Start()
     {
-   
+        text.text = "" + score;
         countText.text = "Total Coins: " + count;
         PlayerPrefs.SetInt("count", count);
+
     }
-    private void Update()
+    private void FixedUpdate()
     {
+        score = count;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(5);
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -65,7 +68,9 @@ public class Crystal : MonoBehaviour
             countText.text = "Total Coins: " + count;
             //Debug.Log("Works");
         }
-    }
 
-    
+       
+        score = count;
+
+    }    
 }
