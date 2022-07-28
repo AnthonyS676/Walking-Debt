@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Sound : MonoBehaviour
 {
@@ -19,5 +20,9 @@ public class Sound : MonoBehaviour
     void Update()
     {
         //score.text = count.ToString();
+    }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
 }
