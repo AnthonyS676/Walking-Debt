@@ -6,9 +6,11 @@ using TMPro;
 public class Goodbye : MonoBehaviour
 {
     public int health;
+    
     public DeathCounter deathCounter;
     void Start()
     {
+       
         //health = 100;
         
     }
@@ -39,6 +41,7 @@ public class Goodbye : MonoBehaviour
         if (health <= 0)
         {
             gameObject.SetActive(false);
+            
             deathCounter.IncreaseDeathCount();
         }
     }
