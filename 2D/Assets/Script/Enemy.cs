@@ -10,8 +10,11 @@ public class Enemy : MonoBehaviour
     public GameObject wall;
     private float distance;
     public float Max;
+
+    PatrolingEnemys patrolingEnemys;
     private void Start()
     {
+        patrolingEnemys = GetComponent<PatrolingEnemys>();
         target = GameObject.FindGameObjectWithTag("Player");
     }
     
@@ -22,6 +25,7 @@ public class Enemy : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, target.transform.position, Speed * Time.deltaTime);
             wall.gameObject.SetActive(false);
+            patrolingEnemys.enabled = false;
         }
     }
 }

@@ -12,6 +12,7 @@ public class PatrolingEnemys : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _mSpriteRenderer = GetComponent<SpriteRenderer>();
         _mSpriteRenderer.flipX = bIsGoingRight;
     }
 
@@ -29,7 +30,7 @@ public class PatrolingEnemys : MonoBehaviour
         if (collision.gameObject.CompareTag("Wall"))
         {
             bIsGoingRight = !bIsGoingRight;
-            _mSpriteRenderer.flipX = bIsGoingRight; bIsGoingRight = !bIsGoingRight;
+            _mSpriteRenderer.flipX = bIsGoingRight; //bIsGoingRight = !bIsGoingRight;
         }
     }
 }

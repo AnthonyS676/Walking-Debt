@@ -6,14 +6,13 @@ using TMPro;
 public class Goodbye : MonoBehaviour
 {
     public int health;
-    public TextMeshProUGUI countText;
-    public int dEATH;
-    public GameObject ATM;
+    
+    public DeathCounter deathCounter;
     void Start()
     {
-        health = 100;
-        countText.text = "Debts paid: " + dEATH;
-        ATM.gameObject.SetActive(false);
+       
+        //health = 100;
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -39,25 +38,11 @@ public class Goodbye : MonoBehaviour
             Debug.Log("Hit");
             collision.gameObject.SetActive(false);
         }
-    }
-
-
-    // Update is called once per frame
-    private void FixedUpdate()
-    {
-        
         if (health <= 0)
         {
             gameObject.SetActive(false);
-            dEATH += 1;
-            countText.text = "Debts paid: " + dEATH;
-            Debug.Log("hello");
-            if (dEATH == 9)
-            {
-                ATM.gameObject.SetActive(true);
-            }
+            
+            deathCounter.IncreaseDeathCount();
         }
-
-
     }
 }
