@@ -160,7 +160,7 @@ MonoBehaviour:
   target: {fileID: 1377917323}
   Speed: 1
   wall: {fileID: 2110382227}
-  Max: 1
+  Max: 0.00001
 --- !u!61 &10108359
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -299,10 +299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c775005e1edba44f8b174f165b7e3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  countText: {fileID: 2042537581}
-  dEATH: 0
-  ATM: {fileID: 994594365}
+  health: 1
+  deathCounter: {fileID: 2042537584}
 --- !u!1 &11135856
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +975,7 @@ MonoBehaviour:
   target: {fileID: 1377917323}
   Speed: 1
   wall: {fileID: 2047163954}
-  Max: 1
+  Max: 0.00001
 --- !u!114 &133099626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -990,10 +988,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c775005e1edba44f8b174f165b7e3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  countText: {fileID: 2042537581}
-  dEATH: 0
-  ATM: {fileID: 994594365}
+  health: 1
+  deathCounter: {fileID: 2042537584}
 --- !u!1 &190670130
 GameObject:
   m_ObjectHideFlags: 0
@@ -2967,7 +2963,7 @@ MonoBehaviour:
   target: {fileID: 1377917323}
   Speed: 1
   wall: {fileID: 2147081243}
-  Max: 1
+  Max: 0.00001
 --- !u!61 &708925450
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3106,10 +3102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c775005e1edba44f8b174f165b7e3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  countText: {fileID: 2042537581}
-  dEATH: 0
-  ATM: {fileID: 994594365}
+  health: 1
+  deathCounter: {fileID: 2042537584}
 --- !u!1 &719720519
 GameObject:
   m_ObjectHideFlags: 0
@@ -3739,7 +3733,7 @@ MonoBehaviour:
   target: {fileID: 1377917323}
   Speed: 1
   wall: {fileID: 370766023}
-  Max: 1
+  Max: 0.00001
 --- !u!61 &825709792
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3878,10 +3872,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c775005e1edba44f8b174f165b7e3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  countText: {fileID: 2042537581}
-  dEATH: 0
-  ATM: {fileID: 994594365}
+  health: 1
+  deathCounter: {fileID: 2042537584}
 --- !u!1 &847629008
 GameObject:
   m_ObjectHideFlags: 0
@@ -4354,7 +4346,7 @@ MonoBehaviour:
   target: {fileID: 1377917323}
   Speed: 1
   wall: {fileID: 2035077324}
-  Max: 1
+  Max: 0.00001
 --- !u!61 &943930880
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4493,10 +4485,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c775005e1edba44f8b174f165b7e3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  countText: {fileID: 2042537581}
-  dEATH: 0
-  ATM: {fileID: 994594365}
+  health: 1
+  deathCounter: {fileID: 2042537584}
 --- !u!1 &991981124
 GameObject:
   m_ObjectHideFlags: 0
@@ -4623,7 +4613,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &994594366
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5309,7 +5299,7 @@ MonoBehaviour:
   target: {fileID: 1377917323}
   Speed: 1
   wall: {fileID: 933415687}
-  Max: 1
+  Max: 0.00001
 --- !u!61 &1087306061
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5448,10 +5438,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c775005e1edba44f8b174f165b7e3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  countText: {fileID: 2042537581}
-  dEATH: 0
-  ATM: {fileID: 994594365}
+  health: 1
+  deathCounter: {fileID: 2042537584}
 --- !u!1 &1117681338
 GameObject:
   m_ObjectHideFlags: 0
@@ -6048,7 +6036,7 @@ MonoBehaviour:
   target: {fileID: 1377917323}
   Speed: 1
   wall: {fileID: 1265003275}
-  Max: 1
+  Max: 0.00001
 --- !u!61 &1349221844
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6187,10 +6175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c775005e1edba44f8b174f165b7e3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  countText: {fileID: 2042537581}
-  dEATH: 0
-  ATM: {fileID: 994594365}
+  health: 1
+  deathCounter: {fileID: 2042537584}
 --- !u!1 &1377917323
 GameObject:
   m_ObjectHideFlags: 0
@@ -6383,7 +6369,7 @@ MonoBehaviour:
   projectile: {fileID: 4759513164285669436, guid: 0b42b9f4d0ec83f419a0afe0996ee513, type: 3}
   projectile1: {fileID: -3119965098550323063, guid: 056a4d57b038afb46a06bdb6d64e3b14, type: 3}
   speed: 40
-  anim: {fileID: 0}
+  anim: {fileID: 847629009}
 --- !u!114 &1377917331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6773,7 +6759,7 @@ MonoBehaviour:
   target: {fileID: 1377917323}
   Speed: 1
   wall: {fileID: 2034433164}
-  Max: 1
+  Max: 0.00001
 --- !u!61 &1522703239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6912,10 +6898,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c775005e1edba44f8b174f165b7e3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  countText: {fileID: 2042537581}
-  dEATH: 0
-  ATM: {fileID: 994594365}
+  health: 1
+  deathCounter: {fileID: 2042537584}
 --- !u!1 &1529047363
 GameObject:
   m_ObjectHideFlags: 0
@@ -8695,8 +8679,9 @@ GameObject:
   - component: {fileID: 2042537583}
   - component: {fileID: 2042537582}
   - component: {fileID: 2042537581}
+  - component: {fileID: 2042537584}
   m_Layer: 5
-  m_Name: de\
+  m_Name: DeathText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8818,6 +8803,21 @@ RectTransform:
   m_AnchoredPosition: {x: -120, y: -57}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2042537584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042537580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d198c266f4b18441aee27d448aa3eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countText: {fileID: 2042537581}
+  dEATH: 0
+  ATM: {fileID: 994594365}
 --- !u!1 &2046311275
 GameObject:
   m_ObjectHideFlags: 0
@@ -8855,7 +8855,7 @@ MonoBehaviour:
   target: {fileID: 1377917323}
   Speed: 1
   wall: {fileID: 453891345}
-  Max: 1
+  Max: 0.00001
 --- !u!61 &2046311277
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8994,10 +8994,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c775005e1edba44f8b174f165b7e3e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  countText: {fileID: 2042537581}
-  dEATH: 0
-  ATM: {fileID: 994594365}
+  health: 1
+  deathCounter: {fileID: 2042537584}
 --- !u!1 &2047163954
 GameObject:
   m_ObjectHideFlags: 0
