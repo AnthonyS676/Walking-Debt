@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class Main : MonoBehaviour
+public class Sound : MonoBehaviour
 {
     public AudioSource audio;
     // Start is called before the first frame update
@@ -16,9 +15,5 @@ public class Main : MonoBehaviour
     void Update()
     {
         
-    }
-    public void game()
-    {
-        SceneManager.LoadScene("Level1");
     }
 }
