@@ -706,8 +706,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Main, Assembly-CSharp
+      - m_Target: {fileID: 1966687569}
+        m_TargetAssemblyTypeName: LoseAudio, Assembly-CSharp
         m_MethodName: game
         m_Mode: 1
         m_Arguments:
@@ -995,7 +995,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 2.59
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
@@ -1084,9 +1084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 122ffeaeb0b62a54b93d2e1ebf6a2b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: 5fd880eb184005e4daaf29cf5408d843, type: 3}
-  cursorMode: 1
-  hotSpot: {x: 0, y: 0}
+  cursorTexture: {fileID: 2800000, guid: 41b867681b312a34d87ba735e03df100, type: 3}
 --- !u!4 &1966687567
 Transform:
   m_ObjectHideFlags: 0
