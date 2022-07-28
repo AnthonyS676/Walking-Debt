@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     public GameObject wall;
     private float distance;
     public float Max;
+    public Animator anim;
 
     PatrolingEnemys patrolingEnemys;
     private void Start()
@@ -20,6 +21,7 @@ public class Enemy : MonoBehaviour
     
     private void Update()
     {
+        bool moving = true;
         distance = Vector2.Distance(target.transform.position, transform.position);
         if (distance <= Max)
         {
@@ -27,5 +29,6 @@ public class Enemy : MonoBehaviour
             wall.gameObject.SetActive(false);
             patrolingEnemys.enabled = false;
         }
+        anim.SetBool("Walking", moving);
     }
 }

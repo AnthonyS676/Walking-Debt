@@ -7,13 +7,17 @@ public class Crystal : MonoBehaviour
 {
     public TextMeshProUGUI countText;
     public int count;
+    public AudioSource audioSource;
 
-
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
     private void Start()
     {
    
         countText.text = "Total Coins: " + count;
-
+        PlayerPrefs.SetInt("count", count);
     }
     private void Update()
     {
@@ -27,35 +31,39 @@ public class Crystal : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
        {
-        Debug.Log("Works2");
+        //Debug.Log("Works2");
 
         if (other.gameObject.CompareTag("Coin"))
         {
+            audioSource.Play();
             other.gameObject.SetActive(false);
             count = count + 1;
             countText.text = "Total Coins: " + count;
-            Debug.Log("Works");
+            //Debug.Log("Works");
         }
         if (other.gameObject.CompareTag("Coin1"))
         {
+            audioSource.Play();
             other.gameObject.SetActive(false);
             count = count + 5;
             countText.text = "Total Coins: " + count;
-            Debug.Log("Works");
+            //Debug.Log("Works");
         }
         if (other.gameObject.CompareTag("Coin2"))
         {
+            audioSource.Play();
             other.gameObject.SetActive(false);
             count = count + 10;
             countText.text = "Total Coins: " + count;
-            Debug.Log("Works");
+            //Debug.Log("Works");
         }
         if (other.gameObject.CompareTag("Coin3"))
         {
+            audioSource.Play();
             other.gameObject.SetActive(false);
             count = count + 25;
             countText.text = "Total Coins: " + count;
-            Debug.Log("Works");
+            //Debug.Log("Works");
         }
     }
 
