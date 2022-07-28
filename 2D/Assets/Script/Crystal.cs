@@ -9,9 +9,10 @@ public class Crystal : MonoBehaviour
     public int count;
     public AudioSource audioSource;
 
+
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+
     }
     private void Start()
     {
@@ -26,7 +27,7 @@ public class Crystal : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(5);
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
