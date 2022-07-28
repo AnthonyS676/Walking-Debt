@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Main : MonoBehaviour
+public class LoseAudio : MonoBehaviour
 {
     public new AudioSource audio;
     public AudioSource audioSource;
@@ -16,7 +16,7 @@ public class Main : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void game()
     {
