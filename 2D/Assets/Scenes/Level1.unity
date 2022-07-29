@@ -3789,9 +3789,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 280b3b1e8f7e4bb4abecb23fd5ad07e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  minDist: 1
-  target: {fileID: 1377917327}
+  player: {fileID: 1377917327}
+  moveSpeed: 5
 --- !u!61 &943930880
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3881,7 +3880,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 9081867485709068927, guid: 1b102731e0f3ead449a5e115851bfd58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
