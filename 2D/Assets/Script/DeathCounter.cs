@@ -9,10 +9,11 @@ public class DeathCounter : MonoBehaviour
     public int dEATH = 0;
     public GameObject ATM;
     public AudioSource audioSource;
+    public AudioSource audioSource2;
 
     public void IncreaseDeathCount()
     {
-        
+        audioSource2.Play();
         dEATH = dEATH + 1;
         countText.text = "Debts paid: " + dEATH;
         Debug.Log("add");
@@ -22,11 +23,8 @@ public class DeathCounter : MonoBehaviour
             ATM.gameObject.SetActive(true);
             gameObject.SetActive(false);
             Invoke("Win", 3f);
-            Debug.Log("de");
+            //Debug.Log("de");
         }
     }
-    public void win()
-    {
-
-    }
+   
 }

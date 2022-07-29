@@ -24,6 +24,10 @@ public class Crystal : MonoBehaviour
     private void FixedUpdate()
     {
         score = count;
+        if (count <= 0)
+        {
+            SceneManager.LoadScene("YouLose");
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
