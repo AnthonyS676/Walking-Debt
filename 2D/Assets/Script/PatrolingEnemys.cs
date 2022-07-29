@@ -6,7 +6,7 @@ public class PatrolingEnemys : MonoBehaviour
 {
     public float MovementSpeed = 3.0f;
     public bool bIsGoingRight = true;
-   
+    public Animator anim;
     private SpriteRenderer _mSpriteRenderer;
 
     // Start is called before the first frame update
@@ -29,6 +29,7 @@ public class PatrolingEnemys : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
+
             bIsGoingRight = !bIsGoingRight;
             _mSpriteRenderer.flipX = bIsGoingRight; //bIsGoingRight = !bIsGoingRight;
         }
