@@ -23,11 +23,8 @@ public class DeathCounter : MonoBehaviour
             ATM.gameObject.SetActive(true);
             gameObject.SetActive(false);
             Invoke("Win", 3f);
-            Debug.Log("de");
+            //Debug.Log("de");
         }
     }
-    public void win()
-    {
-
-    }
+   
 }

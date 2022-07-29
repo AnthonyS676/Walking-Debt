@@ -23,4 +23,9 @@ public class LoseAudio : MonoBehaviour
         audio.Play();
         SceneManager.LoadScene("Level1");
     }
+    public void MainMenu()
+    {
+        audio.Play();
+        SceneManager.LoadScene("SampleScene");
+    }
 }

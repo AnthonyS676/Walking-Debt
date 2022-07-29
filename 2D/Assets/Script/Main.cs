@@ -23,4 +23,9 @@ public class Main : MonoBehaviour
         audio.Play();
         SceneManager.LoadScene("Level1");
     }
+    public void Quit()
+    {
+        audio.Play();
+        Application.Quit();
+    }
 }
