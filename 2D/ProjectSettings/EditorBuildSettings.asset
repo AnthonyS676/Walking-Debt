@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 47ec29a7ace277049a1f5cd645ada471
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Oki.unity
     guid: 323171c812195af4d9f3ad4c412f0f5a
   - enabled: 1
@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/YouWin.unity
     guid: 90c470f91c501054bb571db2844bcc81
+  - enabled: 0
+    path: Assets/Scenes/Yes.unity
+    guid: c3621589203def3489b279a07065a695
   - enabled: 1
     path: Assets/Scenes/YouLose.unity
     guid: 0e33ea2dae5646c418ab9c0768521031

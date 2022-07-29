@@ -9,7 +9,12 @@ public class Escape : MonoBehaviour
     public GameObject Text1;
     public GameObject Text2;
     public GameObject Game;
+    [SerializeField] AudioSource audioSource;
 
+    private void Start()
+    {
+        audioSource.Play();
+    }
     private void Awake()
     {
         Text1.SetActive(true);
@@ -18,9 +23,9 @@ public class Escape : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.S))
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("Level1");
         }
     }
     void text()

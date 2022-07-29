@@ -21,7 +21,7 @@ public class Main : MonoBehaviour
     public void game()
     {
         audio.Play();
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Game");
     }
     public void Quit()
     {

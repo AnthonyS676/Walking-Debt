@@ -6,7 +6,6 @@ using TMPro;
 public class Goodbye : MonoBehaviour
 {
     public int health;
-    [SerializeField] string lose;
     
     public DeathCounter deathCounter;
     void Start()
@@ -15,12 +14,17 @@ public class Goodbye : MonoBehaviour
         //health = 100;
         
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(lose);
+            SceneManager.LoadScene("YouLose");
         }
+    }
+   
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
         if (collision.gameObject.CompareTag("bullet"))
         {
             health -= 5;
