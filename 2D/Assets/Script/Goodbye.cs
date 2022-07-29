@@ -6,6 +6,7 @@ using TMPro;
 public class Goodbye : MonoBehaviour
 {
     public int health;
+    [SerializeField] string lose;
     
     public DeathCounter deathCounter;
     void Start()
@@ -18,7 +19,7 @@ public class Goodbye : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(lose);
         }
         if (collision.gameObject.CompareTag("bullet"))
         {
@@ -40,9 +41,11 @@ public class Goodbye : MonoBehaviour
         }
         if (health <= 0)
         {
+            deathCounter.IncreaseDeathCount();
             gameObject.SetActive(false);
             
-            deathCounter.IncreaseDeathCount();
+
+
         }
     }
 }
