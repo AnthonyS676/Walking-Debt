@@ -27,8 +27,8 @@ public class Enemy : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, height, Speed * Time.deltaTime);
             //wall.gameObject.SetActive(false);
-            patrolingEnemys.enabled = false;
+            //patrolingEnemys.enabled = false;
         }
-        anim.SetBool("Walking", moving);
+        //anim.SetBool("Walking", moving);
     }
 }
