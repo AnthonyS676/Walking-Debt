@@ -5,31 +5,32 @@ using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 20.0f;
-    public float minDist = 1f;
-    public Transform target;
+    public Transform player;
+    public float moveSpeed = 5f;
+    private Rigidbody2D rb;
+    private Vector2 movement;
+
+    // Start is called before the first frame update
     void Start()
     {
-        if (target == null)
-        {
-            if (GameObject.FindWithTag("Player") != null)
-            {
-                target = GameObject.FindWithTag("Player").GetComponent<Transform>();
-            }
-        }
+        rb = this.GetComponent<Rigidbody2D>();
     }
 
+    // Update is called once per frame
     void Update()
     {
-        if (target == null)
-            return;
-        transform.LookAt(target);
-        float distance = Vector2.Distance(transform.position, target.position);
-        if (distance > minDist)
-            transform.position += transform.forward * speed * Time.deltaTime;
+        Vector3 direction = player.position - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        rb.rotation = angle;
+        direction.Normalize();
+        movement = direction;
     }
-    public void SetTarget(Transform newTarget)
+    private void FixedUpdate()
     {
-        target = newTarget;
+        moveCharacter(movement);
+    }
+    void moveCharacter(Vector2 direction)
+    {
+        rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
 }
