@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
-    public Transform player;
+    //public Transform player;
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
-    private Vector2 movement;
+    [SerializeField] Transform target;
+    [SerializeField] float speed;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< HEAD
+
         if (target == null)
             return;
         float distance = Vector2.Distance(transform.position, target.position);
@@ -48,20 +49,5 @@ public class Enemy : MonoBehaviour
             transform.LookAt(target.position);
         }*/
 
-=======
-        Vector3 direction = player.position - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        rb.rotation = angle;
-        direction.Normalize();
-        movement = direction;
->>>>>>> 6e31ed0096436daad2de94efef5b84288798e3cd
-    }
-    private void FixedUpdate()
-    {
-        moveCharacter(movement);
-    }
-    void moveCharacter(Vector2 direction)
-    {
-        rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
 }
