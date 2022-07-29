@@ -5,30 +5,39 @@ using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
-    public GameObject target;
-    public float Speed;
-    private float distance;
-    public float Max;
-    public Vector2 height;
-    public Animator anim;
-
-    PatrolingEnemys patrolingEnemys;
-    private void Start()
+    public float speed = 20.0f;
+    public float minDist = 1f;
+    public Transform target;
+    void Start()
     {
-        patrolingEnemys = GetComponent<PatrolingEnemys>();
-        target = GameObject.FindGameObjectWithTag("Player");
-    }
-    
-    private void Update()
-    {
-        bool moving = true;
-        distance = Vector2.Distance(target.transform.position, transform.position);
-        if (distance <= Max)
+        if (target == null)
         {
+<<<<<<< HEAD
             transform.position = Vector2.MoveTowards(transform.position, height, Speed * Time.deltaTime);
             //wall.gameObject.SetActive(false);
             //patrolingEnemys.enabled = false;
         }
         //anim.SetBool("Walking", moving);
+=======
+            if (GameObject.FindWithTag("Player") != null)
+            {
+                target = GameObject.FindWithTag("Player").GetComponent<Transform>();
+            }
+        }
+>>>>>>> 4ded6f5e006f5b4190643d8349da90842f5a9756
+    }
+
+    void Update()
+    {
+        if (target == null)
+            return;
+        transform.LookAt(target);
+        float distance = Vector2.Distance(transform.position, target.position);
+        if (distance > minDist)
+            transform.position += transform.forward * speed * Time.deltaTime;
+    }
+    public void SetTarget(Transform newTarget)
+    {
+        target = newTarget;
     }
 }
