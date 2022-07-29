@@ -3789,8 +3789,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 280b3b1e8f7e4bb4abecb23fd5ad07e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1377917327}
   moveSpeed: 5
+  target: {fileID: 1377917327}
+  speed: 2
 --- !u!61 &943930880
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3897,7 +3898,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943930878}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.55, y: -1.63, z: -1}
+  m_LocalPosition: {x: 3.54, y: -1.6, z: -1}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1067000066}
